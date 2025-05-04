@@ -1,16 +1,14 @@
 /// <reference types="wesl-plugin/suffixes" />
-import { link } from "wesl";
+import { link, LinkedWesl, requestWeslDevice } from "wesl";
 import appWesl from "../shaders/app.wesl?link";
 
 main();
 
 async function main(): Promise<void> {
-  const wgslSrcMap = await link(appWesl);
-  const wgslSrc = wgslSrcMap.dest;
+  const linked = await link(appWesl);
+  displayShaderCode(linked.dest);
 
-  displayShaderCode(wgslSrc);
-
-  launchShader(wgslSrc);
+  launchShader(linked);
 }
 
 function displayShaderCode(wgslSrc: string): void {
@@ -19,11 +17,11 @@ function displayShaderCode(wgslSrc: string): void {
   }<pre>`;
 }
 
-async function launchShader(wgsl: string): Promise<void> {
+async function launchShader(linked: LinkedWesl): Promise<void> {
   const adapter = await navigator.gpu.requestAdapter();
-  const device = (await adapter?.requestDevice())!;
+  const device = await requestWeslDevice(adapter);
+  const module = linked.createShaderModule(device, {});
 
-  const module = device?.createShaderModule({ code: wgsl });
   const pipeline = device.createComputePipeline({
     layout: "auto",
     compute: { module },
