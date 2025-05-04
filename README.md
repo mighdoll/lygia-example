@@ -1,15 +1,19 @@
 # WESL with a Bundler
 
-This example shows how you can use [WESL](https://wesl-lang.dev/) with Vite. We also support other bundlers.
+This example shows how you can use [WESL](https://wesl-lang.dev/) with Vite and Lygia.
 
-The standout feature of this example is that it uses a vite plugin to
-- hook into Vite's hot reloading! Try editing a shader 🚀
-- reads the `wesl.toml` and automatically resolve shaders
-- minimizes the number of HTTP requests by bundling shaders
-
-
-Try it out with
-```
+```sh
 pnpm install
-pnpm run dev
+pnpm dev
 ```
+
+The interesting bits are:
+
+- *app.wesl* - `import lygia::math::consts::PI;` - use lygia in shader code
+- *main.ts*
+  - `import appWesl from "../shaders/app.wesl?link";` - assemble shader bundles with vite
+  - `p const linked = await link(appWesl);` - link shaders at runtime
+- *wesl.toml* - `dependencies = ["lygia/math/consts"]`
+
+This example links shaders dynamically at runtime (for maximum flexibility).
+The doc site also describes how to do [static linking](https://wesl-lang.dev/docs/JavaScript-Builds#controlling-static-bundler-builds).
