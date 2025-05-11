@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "lygia": "link:../lygia",
-    "wesl": "0.6.1"
+    "wesl": "0.6.2"
   },
   "devDependencies": {
     "@webgpu/types": "^0.1.58",
     "typescript": "~5.8.2",
     "vite": "^6.2.2",
-    "wesl-plugin": "0.6.1"
+    "wesl-plugin": "0.6.2"
   }
 }
