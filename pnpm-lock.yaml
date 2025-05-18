@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       lygia:
-        specifier: link:../lygia
-        version: link:../lygia
+        specifier: ^1.3.2
+        version: 1.3.2
       wesl:
         specifier: 0.6.2
         version: 0.6.2
@@ -312,6 +312,9 @@ packages:
   import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
 
+  lygia@1.3.2:
+    resolution: {integrity: sha512-oA5Ra3uiXnOogeWhxB5Te4N908JFc2nDiqQHEzF5ukk1TAtAaXTak9qjv1noJQ3m5XuGNwD9Vbm+Ic+/QLJ7fw==}
+
   mini-parse@0.6.2:
     resolution: {integrity: sha512-RXRQ/g1TYoHzXXsCMt8rc4zIM72DMn0YStRzi7ezv+aVPzxy2bA009gyvu6Ux0+jSfmXEmytsppvvgARnehKUQ==}
 
@@ -607,6 +610,8 @@ snapshots:
     optional: true
 
   import-meta-resolve@4.1.0: {}
+
+  lygia@1.3.2: {}
 
   mini-parse@0.6.2: {}
 
