@@ -1,5 +1,5 @@
 /// <reference types="wesl-plugin/suffixes" />
-import { link, LinkedWesl, requestWeslDevice } from "wesl";
+import { link, type LinkedWesl, requestWeslDevice } from "wesl";
 import appWesl from "../shaders/app.wesl?link";
 
 main();
@@ -12,9 +12,10 @@ async function main(): Promise<void> {
 }
 
 function displayShaderCode(wgslSrc: string): void {
-  document.querySelector<HTMLDivElement>("#app")!.innerHTML = `<pre>${
-    wgslSrc + "\n<foo>"
-  }<pre>`;
+  const app = document.querySelector<HTMLDivElement>("#app");
+  if (app) {
+    app.innerHTML = `<pre>${wgslSrc}<pre>`;
+  }
 }
 
 async function launchShader(linked: LinkedWesl): Promise<void> {
