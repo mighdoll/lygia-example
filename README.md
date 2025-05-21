@@ -13,7 +13,6 @@ The interesting bits are:
 - *main.ts*
   - `import appWesl from "../shaders/app.wesl?link";` - assemble shader bundles with vite
   - `p const linked = await link(appWesl);` - link shaders at runtime
-- *wesl.toml* - `dependencies = ["lygia/math/consts"]`
 
 This example links shaders dynamically at runtime (for maximum flexibility).
 The doc site also describes how to do [static linking](https://wesl-lang.dev/docs/JavaScript-Builds#controlling-static-bundler-builds).
