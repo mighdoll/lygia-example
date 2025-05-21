@@ -12,8 +12,8 @@ importers:
         specifier: ^1.3.2
         version: 1.3.2
       wesl:
-        specifier: 0.6.2
-        version: 0.6.2
+        specifier: 0.6.6
+        version: 0.6.6
     devDependencies:
       '@webgpu/types':
         specifier: ^0.1.60
@@ -25,8 +25,8 @@ importers:
         specifier: ^6.3.5
         version: 6.3.5
       wesl-plugin:
-        specifier: 0.6.2
-        version: 0.6.2(esbuild@0.25.4)(vite@6.3.5)
+        specifier: 0.6.6
+        version: 0.6.6(esbuild@0.25.4)(vite@6.3.5)
 
 packages:
 
@@ -180,6 +180,15 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@petamoriken/float16@3.9.2':
+    resolution: {integrity: sha512-VgffxawQde93xKxT3qap3OH+meZf7VaSB5Sqd4Rqc+FP5alWbpOyan/7tRbOAvynjpG3GpdtAuGU/NdhQpmrog==}
+
+  '@reactively/core@0.0.8':
+    resolution: {integrity: sha512-5uAnNf2gQSm3gM7z6Lx079H1/MuDQQI+5aYfwyDFGR9nHZj8yblLY/6aOJVWp+NcBwXVBKuWQ28qWHD9F1qN1w==}
+
+  '@reactively/decorate@0.0.4':
+    resolution: {integrity: sha512-hiGsUjns2n1xCBcq6yTEal5TrL1ATcWfHMmbE0M3OxFvEt+WyVGmWwamXlwXUgODpYDya4SCoormGCTjLNr7HA==}
+
   '@rollup/rollup-android-arm-eabi@4.41.0':
     resolution: {integrity: sha512-KxN+zCjOYHGwCl4UCtSfZ6jrq/qi88JDUtiEFk8LELEHq2Egfc/FgW+jItZiOLRuQfb/3xJSgFuNPC9jzggX+A==}
     cpu: [arm]
@@ -291,10 +300,16 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  berry-pretty@0.0.4:
+    resolution: {integrity: sha512-vgzAZsecAZ6MTAUsw2O6QdVDlrqRdnOoouY9V876Tgp1EC3jKE+Xqu9P7uGW0vF7JFGlyLnrVVWKmnPHMczHOQ==}
+
   esbuild@0.25.4:
     resolution: {integrity: sha512-8pgjLUcUjcgDg+2Q4NYXnPbo/vncAY4UmyaCm0jZevERqCHZIaWwdJHkf8XQtu4AxSKCdvrUbT0XUr1IdZzI8Q==}
     engines: {node: '>=18'}
     hasBin: true
+
+  fast-deep-equal@3.1.3:
+    resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
   fdir@6.4.4:
     resolution: {integrity: sha512-1NZP+GK4GfuAv3PqKvxQRDMjdSRZjnkq7KfhlNrCNNlZ0ygQFpebfrnfnq/W7fpUnAv9aGWmY1zKx7FYL3gwhg==}
@@ -315,8 +330,8 @@ packages:
   lygia@1.3.2:
     resolution: {integrity: sha512-oA5Ra3uiXnOogeWhxB5Te4N908JFc2nDiqQHEzF5ukk1TAtAaXTak9qjv1noJQ3m5XuGNwD9Vbm+Ic+/QLJ7fw==}
 
-  mini-parse@0.6.2:
-    resolution: {integrity: sha512-RXRQ/g1TYoHzXXsCMt8rc4zIM72DMn0YStRzi7ezv+aVPzxy2bA009gyvu6Ux0+jSfmXEmytsppvvgARnehKUQ==}
+  mini-parse@0.6.6:
+    resolution: {integrity: sha512-cd7ycmn97Myhvylgqor92Y/whhAfkD/OleT0vu1eYqUG9LsLgiaY1CiA3z98XZ4DxcX5W8/2hqupdSISxbz54g==}
 
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
@@ -342,6 +357,9 @@ packages:
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
+
+  thimbleberry@0.2.10:
+    resolution: {integrity: sha512-sWQIKq9FdqYZbsUfw7l7/HqxNmvze0e6/FUlgjBkwYtfd5A30cjfY2M+mHUGlO0+bGZro5J0c7lfeHJ1Zu7/JQ==}
 
   tinyglobby@0.2.13:
     resolution: {integrity: sha512-mEwzpUgrLySlveBwEVDMKk5B57bhLPYovRfPAXD5gA/98Opn0rCDj3GtLwFvCvH5RK9uPCExUROW5NjDwvqkxw==}
@@ -402,8 +420,8 @@ packages:
   webpack-virtual-modules@0.6.2:
     resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
 
-  wesl-plugin@0.6.2:
-    resolution: {integrity: sha512-+1TAS1AdAqqDk2OBX4SfQUX6QlPxqlsvPq4Jq3TKsnp1K/7XeRIDJbC6x96S9d9Vq7BzoT993yTOGTEs2dvwQw==}
+  wesl-plugin@0.6.6:
+    resolution: {integrity: sha512-UaQQQoDwrRnu4ErP5Yc+h2cjcL7PQibtqAYNhAeTgHKCxtQC1xd/UpZef9JGPEHaomaHUSBzr5HSgPqaAf5/VQ==}
     peerDependencies:
       '@farmfe/core': '>=1'
       '@nuxt/kit': ^3
@@ -428,8 +446,13 @@ packages:
       webpack:
         optional: true
 
-  wesl@0.6.2:
-    resolution: {integrity: sha512-EmlV4mb4HeYwWT2h5B1Ei/E9NMFwTFEyqbYVJ5KoDAIYO+ZezWUVjX/y5n6aHnU0Waf7KuRxE/y7EBRQhO3olw==}
+  wesl-tooling@0.6.6:
+    resolution: {integrity: sha512-xgl1irKSda0W4a+GmKD1fix/LWvItetw68uXB6oQOmp6LnbP3Qo/6ZQPHao+pppjZaRuD/7f3+RP5QjPwIvQtQ==}
+    peerDependencies:
+      wesl: ^0.6.6
+
+  wesl@0.6.6:
+    resolution: {integrity: sha512-jx4I14F7zCDo51LksaQW6BGcqL8yBeWcTMcgF8WVT+C0Sae9MPEL8Ha4sDo+l5+A/WKjOrScSXGwXznZVkcdEA==}
 
 snapshots:
 
@@ -508,6 +531,14 @@ snapshots:
   '@esbuild/win32-x64@0.25.4':
     optional: true
 
+  '@petamoriken/float16@3.9.2': {}
+
+  '@reactively/core@0.0.8': {}
+
+  '@reactively/decorate@0.0.4':
+    dependencies:
+      '@reactively/core': 0.0.8
+
   '@rollup/rollup-android-arm-eabi@4.41.0':
     optional: true
 
@@ -574,6 +605,8 @@ snapshots:
 
   acorn@8.14.1: {}
 
+  berry-pretty@0.0.4: {}
+
   esbuild@0.25.4:
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.25.4
@@ -602,6 +635,8 @@ snapshots:
       '@esbuild/win32-ia32': 0.25.4
       '@esbuild/win32-x64': 0.25.4
 
+  fast-deep-equal@3.1.3: {}
+
   fdir@6.4.4(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
@@ -613,7 +648,7 @@ snapshots:
 
   lygia@1.3.2: {}
 
-  mini-parse@0.6.2: {}
+  mini-parse@0.6.6: {}
 
   nanoid@3.3.11: {}
 
@@ -655,6 +690,14 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
+  thimbleberry@0.2.10:
+    dependencies:
+      '@petamoriken/float16': 3.9.2
+      '@reactively/core': 0.0.8
+      '@reactively/decorate': 0.0.4
+      berry-pretty: 0.0.4
+      fast-deep-equal: 3.1.3
+
   tinyglobby@0.2.13:
     dependencies:
       fdir: 6.4.4(picomatch@4.0.2)
@@ -683,16 +726,23 @@ snapshots:
 
   webpack-virtual-modules@0.6.2: {}
 
-  wesl-plugin@0.6.2(esbuild@0.25.4)(vite@6.3.5):
+  wesl-plugin@0.6.6(esbuild@0.25.4)(vite@6.3.5):
     dependencies:
       import-meta-resolve: 4.1.0
       toml: 3.0.0
       unplugin: 2.3.4
-      wesl: 0.6.2
+      wesl: 0.6.6
+      wesl-tooling: 0.6.6(wesl@0.6.6)
     optionalDependencies:
       esbuild: 0.25.4
       vite: 6.3.5
 
-  wesl@0.6.2:
+  wesl-tooling@0.6.6(wesl@0.6.6):
     dependencies:
-      mini-parse: 0.6.2
+      import-meta-resolve: 4.1.0
+      thimbleberry: 0.2.10
+      wesl: 0.6.6
+
+  wesl@0.6.6:
+    dependencies:
+      mini-parse: 0.6.6
